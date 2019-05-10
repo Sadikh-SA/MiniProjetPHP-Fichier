@@ -50,37 +50,27 @@ echo '<table class="table table-dark table-striped">
 // Création du tableau
   
   if(isset($_POST["submit"])){
-    $id_file = fopen("../Fichiers/tableau1.txt","r");
+    $id_file = fopen("../Fichiers/tableau.txt","r+");
     $nom=$_POST["produit"];
     $prix=$_POST["prix"];
     $qtite=$_POST["quantite"];
-    $test=false;
-    while ($ligne=fgets($id_file)) {
-        $tab = explode(",",$ligne);
-        if (strtolower($tab[0])==strtolower($nom)) {
-          $test=true;
+//$test=false;
+        while ($ligne=fgets($id_file)) {
+              $tab=explode(",",$ligne);
+              if (strtolower($nom)==strtolower($tab[0])) {
+                  $modifier=$tab[0].",".$prix.",".$qtite."\n";
+              }
+              else {
+                $modifier=$ligne;
+              }
+              $newligne=$newligne.$modifier;
         }
-    }
-    fclose($id_file);
-    if ($test==false) {
-        echo"<h2 style='text-align:center; color: red;'>Ce Produit $nom n'existe pas dans la base.</h2>";
-    } else {
-        $file=fopen("../Fichiers/tableau1.txt","r");
-        $fichier=fopen("../Fichiers/tableau2.txt","w+");
-        while ($ligne=fgets($file)) {
-            $tab=explode(",",$ligne);
-        
-            if (strtolower($tab[0])!=strtolower($nom)) {
-                fwrite($fichier,$ligne);
-            } else {
-                fwrite($fichier,$nom.",".$prix.",".$qtite."\n");
-            }
-        }
+        fclose($id_file);
+        $file=fopen("../Fichiers/tableau.txt","w+");
+        fwrite($file,$newligne);
         fclose($file);
-        fclose($fichier);
-        unlink("../Fichiers/tableau1.txt");
-        copy("../Fichiers/tableau2.txt","../Fichiers/tableau1.txt");
-        $id_file=fopen("../Fichiers/tableau2.txt","r");
+  }
+      $id_file=fopen("../Fichiers/tableau.txt","r");
         while ($ligne=fgets($id_file)) {
             $tab=explode(",",$ligne);
             echo "<tr>";
@@ -98,10 +88,6 @@ echo '<table class="table table-dark table-striped">
             echo "</tr>"; 
         }
         fclose($id_file);
-
-      }
-    
-  }
     echo "</tbody></table>"; 
   ?>
 </section>
