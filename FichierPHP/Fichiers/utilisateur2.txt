@@ -1,0 +1,7 @@
+babacar,babacar,User,Aboubacar Camara,774664203,babs@yahoo.fr,Bloquer
+Sadikh,Sadikh,Admin,Ababacar Sadikh GUEYE,784408822,sadikhabou@gmail.com,Actif
+bniass,baye,User,Baye Niass,771127603,bniass@gmail.com,Actif
+admin,admin,Admin,Moimeme,771844682,abougueye96@yahoo.fr,Bloquer
+junior,junior,User,Abdoulaye Junior Ngom,75854785,ngomabdoulaye@gmail.com,Actif
+Maya,Jolie,User,Mariama Ngom,78456792,ngomariama@gmail.com,Bloquer
+babacar,babacar,User,Aboubacar Camara,774664203,babs@yahoo.fr,Actif

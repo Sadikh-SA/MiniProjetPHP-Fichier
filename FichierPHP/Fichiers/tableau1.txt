@@ -1,0 +1,10 @@
+Hp Probook G5,450000,9
+Macbook,1600000,5
+iphone6,160000,65
+GalaxieS8,380000,25
+J7pro,180000,68
+Tablette,130000,80
+iphone8,1600000,7
+Ordinateur Bureau,200000,8
+Scanner,320000,11
+Imprimante,230500,12
