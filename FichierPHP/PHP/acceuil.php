@@ -3,7 +3,7 @@
 <?php include("header.php");
 ?>
 <section class="container">
-<h1 style="text-align:center; color: darkgreen;">Liste de Produits</h1>
+<h1 style="text-align:center; box-shadow: 12px 3px 12px 3px; border-radius: 12px 12px; color: darkgreen; width:25%; border:1px solid green; margin: 0 auto; margin-bottom: 20px;">Liste de Produits</h1>
 <?php
 //tableau
 echo  '<table class="table table-dark table-striped">
@@ -18,16 +18,6 @@ echo  '<table class="table table-dark table-striped">
               <tbody>';
 
               //liste
-/*$liste=array(
-  array('Samsung Galaxy J6+',165 ,10,''),
-  array('Samsung Galaxy A50',264,9,''),
-  array('Samsung Galaxy J6',153,15,''),
-  array('Huawei Y5 (2018)',103,8,''),
-  array('Huawei Y6 (2018)',110,14,''),
-  array('Huawei Y5',134,14,''),
-  array('Huawei P20 Lite',185,11,''),
-  array('Samsung Galaxy J7 (2017)',204,8,''),
-  array('Samsung Galaxy A70',408,15,''),);*/
   $id_file= fopen("../Fichiers/tableau.txt","r");
   $j=0;
   while($ligne=fgets($id_file)){
