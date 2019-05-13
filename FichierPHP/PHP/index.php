@@ -33,12 +33,12 @@ if (isset ($_POST['Login'])) {
         if ($users[0]==$login) {
             if($users[1]==$mdp) { 
                 if ($users[2]=='Admin') {
-                    header('location: admin.php');
+                    header('location: admin.php?login='.$users[0]);
                 } elseif(($users[2]=='User' && $users[6]=="Actif\n") || ($users[2]=='User' && $users[6]=="Actif") ) {
                     header('location: acceuil.php');
                 }
                 else {
-                    echo "<h2 style='color: darkred; text-align: center; margin-top: 20px;'>Vous êtes actuellement en mode BLOQUER. Vous ne pouvez pas entrer Désolé!</h2>";
+                    echo "<h2 style='color:darkred; text-align: center; margin-top: 20px;'>Vous êtes actuellement en mode BLOQUER. Vous ne pouvez pas entrer Désolé!</h2>";
                 }
                 $i++;
             }
