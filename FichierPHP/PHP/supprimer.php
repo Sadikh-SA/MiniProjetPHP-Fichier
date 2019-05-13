@@ -3,7 +3,7 @@
 ?>
 <section class="container">
 <div class="main">
-<h2>Supprimer Produit </h2>
+<h2 style="text-align:center; box-shadow: 12px 3px 12px 3px; border-radius: 12px 12px; color: darkgreen; width:25%; border:1px solid green; margin: 0 auto; margin-bottom: 20px;">Supprimer Produit </h2>
     <div class="contrecherche">
         
     <form id="recherche-form" class="recherche-form" method="POST" action=<?= $_SERVER["PHP_SELF"] ?>>
